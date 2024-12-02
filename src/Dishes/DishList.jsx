@@ -7,8 +7,10 @@ const DishList = () => {
   const [dishes, setDishes] = useState([]);
   const [error, setError] = useState(null);
 
+  //baseURL: "https://localhost:8000/api/dishes",
+
   useEffect(() => {
-    fetch("https://localhost:8000/api/dishes", {
+    fetch("http://localhost:8000/api/dishes", {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
