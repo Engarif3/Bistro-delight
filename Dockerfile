@@ -5,7 +5,7 @@ FROM node:18-alpine
 WORKDIR /usr/src/app
 
 # Copy package.json and package-lock.json (if available)
-COPY package*.json ./
+COPY package.json package-lock.json ./
 
 # Install dependencies
 RUN npm install
@@ -21,4 +21,5 @@ EXPOSE 5173
 
 # Serve the production build
 CMD ["npx", "vite", "preview", "--host", "0.0.0.0"]
+
 

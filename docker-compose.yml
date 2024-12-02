@@ -8,13 +8,13 @@ services:
     networks:
       - restaurant-management
     command: >
-      /bin/sh -c "npm run dev"
+      /bin/sh -c "npm install && npm run dev"
     volumes:
       - .:/usr/src/app
+      - /usr/src/app/node_modules # Prevent overwriting node_modules
     stdin_open: true
     tty: true
 
 networks:
   restaurant-management:
     external: true
-
