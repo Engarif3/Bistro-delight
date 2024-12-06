@@ -8,7 +8,7 @@ import "@smastrom/react-rating/style.css";
 import SectionTitle from "../../components/SectionTitle";
 
 // Import the fake reviews JSON
-import fakeReviews from "../../../public/reviews.json";
+import fakeReviews from "../../assets/reviews.json";
 
 const Reviews = () => {
   return (
