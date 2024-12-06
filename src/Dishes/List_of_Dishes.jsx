@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import api from "../axios";
+import SectionTitle from "../components/SectionTitle";
 
 const List_of_Dishes = () => {
   const [dishes, setDishes] = useState([]);
@@ -51,11 +52,15 @@ const List_of_Dishes = () => {
   }
 
   return (
-    <div className="p-6 bg-gray-100 min-h-screen">
-      <h1 className="text-3xl font-bold text-center text-red-500 underline mb-8">
+    <section className="p-6 bg-gray-100 min-h-screen">
+      {/* <h1 className="text-3xl font-bold text-center text-red-500 underline mb-8">
         Dishes List
-      </h1>
-      <ul className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+      </h1> */}
+      <SectionTitle
+        heading="From Our Menu"
+        subHeading="Popular Items"
+      ></SectionTitle>
+      <ul className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mx-16">
         {dishes.map((dish) => (
           <li
             key={dish.id}
@@ -92,7 +97,7 @@ const List_of_Dishes = () => {
           </li>
         ))}
       </ul>
-    </div>
+    </section>
   );
 };
 
