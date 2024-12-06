@@ -5,8 +5,9 @@ import { Helmet } from "react-helmet-async";
 // import Testimonials from "../Testimonials/Testimonials";
 import Banner from "./Banner";
 import Category from "./Category";
-import List_of_Dishes from "../../Dishes/List_of_Dishes";
+// import List_of_Dishes from "../../Dishes/List_of_Dishes";
 import FoodItems from "../../Dishes/FoodItems";
+import Reviews from "./Reviews";
 
 const Home = () => {
   return (
@@ -20,7 +21,7 @@ const Home = () => {
       <FoodItems></FoodItems>
       {/* <PopularMenu></PopularMenu> */}
       {/* <Featured></Featured> */}
-      {/* <Testimonials></Testimonials> */}
+      <Reviews></Reviews>
     </div>
   );
 };

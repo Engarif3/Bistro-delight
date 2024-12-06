@@ -201,7 +201,14 @@ const NavBar = () => {
               {navOptions}
             </ul>
           </div>
-          <a className="btn btn-ghost normal-case text-xl">Bistro Delight</a>
+          <a className="btn btn-ghost normal-case text-xl  font-thin">
+            <p className="flex items-center">
+              <span className="font-bolder text-red-600 text-2xl">B</span>istro
+            </p>
+            <p className="flex items-center">
+              <span className="font-bolder text-red-600 text-2xl">D</span>elight
+            </p>
+          </a>
         </div>
         <div className="navbar-center hidden lg:flex -my-4 ">
           <ul className="menu menu-horizontal px-1 flex  items-center">
