@@ -59,10 +59,8 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <div className="p-4 footer-center bg-base-300 text-base-content">
-        <div>
-          <p>Copyright © 2024 - All right reserved by Bistro Delight</p>
-        </div>
+      <div className="p-4 footer-center bg-base-300 text-base-content border-2">
+        <p>Copyright © 2024 - All right reserved by Bistro Delight</p>
       </div>
     </footer>
   );

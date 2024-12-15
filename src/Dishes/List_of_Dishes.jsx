@@ -92,7 +92,9 @@ const List_of_Dishes = () => {
               <p className="text-gray-600">Price: €{dish.price}</p>
             </div>
             <div class="p-4 flex justify-end">
-              <button class="btn btn-sm btn-active btn-primary">Primary</button>
+              <button class="btn btn-sm btn-active btn-primary">
+                ADD TO CART
+              </button>
             </div>
           </li>
         ))}

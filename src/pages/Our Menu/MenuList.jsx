@@ -1,18 +1,17 @@
-// import SectionTitle from "../../../components/SectionTitle/SectionTitle";
-// import MenuItem from "../../Shared/MenuItem/MenuItem";
-// import useMenu from "../../../hooks/useMenu";
 import { useEffect, useState } from "react";
-import FoodItem from "./FoodItem";
-import SectionTitle from "../components/SectionTitle";
-import api from "../axios";
+import MenuCard from "./MenuCard";
+import api from "../../axios";
+import SectionTitle from "../../components/SectionTitle";
 
-const FoodItems = () => {
+const MenuList = () => {
   const [dishes, setDishes] = useState([]);
+  const [cart, setCart] = useState([]); // Add cart state
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(true);
-  // const [menu] = useMenu();
-  // const popular = menu.filter((item) => item.category === "popular");
 
+  const backendUrl = "http://localhost:8000";
+
+  // This function checks if an image path is available and is valid.
   const getImageSrc = (imagePath) => {
     if (!imagePath) {
       return "/placeholder.jpg"; // Default placeholder image
@@ -21,6 +20,11 @@ const FoodItems = () => {
       return imagePath;
     }
     return `${backendUrl}${imagePath}`;
+  };
+
+  // This function updates the cart state
+  const updateCart = (newCart) => {
+    setCart(newCart); // Update the cart with the new data
   };
 
   useEffect(() => {
@@ -55,25 +59,20 @@ const FoodItems = () => {
   }
 
   return (
-    <section className="mb-12">
-      <SectionTitle
-        heading="From Our Menu"
-        subHeading="Popular Items"
-      ></SectionTitle>
-      <div className="flex flex-col justify-center items-center">
-        <div className="flex flex-col justify-center items-center w-10/12 ">
-          <div className="grid md:grid-cols-2 gap-8 mx-16">
-            {dishes.map((item) => (
-              <FoodItem key={item.id} item={item}></FoodItem>
-            ))}
-          </div>
-          <button className="btn btn-outline border-0 border-b-4 mt-6">
-            View Full Menu
-          </button>
-        </div>
+    <section className="p-6 bg-gray-100 min-h-screen">
+      <SectionTitle heading="From Our Menu" subHeading="Popular Items" />
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mx-16">
+        {dishes.map((dish) => (
+          <MenuCard
+            key={dish.id}
+            dish={dish}
+            getImageSrc={getImageSrc}
+            updateCart={updateCart}
+          />
+        ))}
       </div>
     </section>
   );
 };
 
-export default FoodItems;
+export default MenuList;

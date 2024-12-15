@@ -21,6 +21,7 @@
     "react-rating": "^2.0.5",
     "react-responsive-carousel": "^3.2.23",
     "react-router-dom": "^6.28.0",
+    "react-toastify": "^10.0.6",
     "swipe": "^1.7.7",
     "swiper": "^11.1.15"
   },
