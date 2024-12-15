@@ -38,8 +38,10 @@ A fully responsive restaurant management application with a focus on managing me
 Make sure you have the following installed on your system:
 
 - [Setup backend application first](https://github.com/Engarif3/restaurant-management)
-- [Docker](https://www.docker.com/)  
-  If running locally instead of Docker:
+- [Docker](https://www.docker.com/)
+
+### If running locally instead of Docker:
+
 - [Node.js](https://nodejs.org/)
 - [PHP](https://www.php.net/)
 - [Symfony](https://symfony.com/)
