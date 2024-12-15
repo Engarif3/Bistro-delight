@@ -59,9 +59,16 @@ const MenuList = () => {
   }
 
   return (
-    <section className="p-6 bg-gray-100 min-h-screen">
-      <SectionTitle heading="From Our Menu" subHeading="Popular Items" />
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mx-16">
+    <section className="p-6 bg-gray-100 min-h-screen ">
+      {/* <SectionTitle
+        heading="Our Menu"
+        subHeading="Have a loot at"
+        className="mt-16"
+      /> */}
+      <h2 className="text-2xl font-bold mb-8 text-center mt-16">
+        Select a Menu
+      </h2>
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mx-16 mt-4">
         {dishes.map((dish) => (
           <MenuCard
             key={dish.id}

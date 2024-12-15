@@ -14,7 +14,7 @@ const Reviews = () => {
   return (
     <section className="my-20">
       <SectionTitle
-        subHeading="What Our Client Say"
+        subHeading="What Our Clients Say"
         heading={"Testimonials"}
       ></SectionTitle>
 
