@@ -4,6 +4,7 @@ const FoodItem = ({ item }) => {
   const { name, image, price, description } = item;
   const [isModalOpen, setIsModalOpen] = useState(false);
   const backendUrl = "http://localhost:8000";
+  // const backendUrl = "http://44.202.128.16:8000"; //from aws instance
 
   const getImageSrc = (imagePath) => {
     if (!imagePath) {

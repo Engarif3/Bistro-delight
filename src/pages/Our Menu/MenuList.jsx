@@ -10,6 +10,7 @@ const MenuList = () => {
   const [loading, setLoading] = useState(true);
 
   const backendUrl = "http://localhost:8000";
+  //const backendUrl = "http://44.202.128.16:8000";
 
   // This function checks if an image path is available and is valid.
   const getImageSrc = (imagePath) => {
